@@ -20,32 +20,32 @@ const Register = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    if (!/^[A-Za-z]+$/.test(name)) {
-      toast.error("Name must contain only alphabets");
-      return;
-    }
+    // if (!/^[A-Za-z]+$/.test(name)) {
+    //   toast.error("Name must contain only alphabets");
+    //   return;
+    // }
 
-    if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(email)) {
-      toast.error("Please enter a valid email address");
-      return;
-    }
+    // if (!/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(email)) {
+    //   toast.error("Please enter a valid email address");
+    //   return;
+    // }
 
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-    if (!passwordPattern.test(password)) {
-      toast.error("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number");
-      return;
-    }
+    // const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    // if (!passwordPattern.test(password)) {
+    //   toast.error("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number");
+    //   return;
+    // }
 
-    if (!/^[A-Za-z ]+$/.test(city)) {
-      toast.error("City must contain only alphabets and spaces");
-      return;
-    }
+    // if (!/^[A-Za-z ]+$/.test(city)) {
+    //   toast.error("City must contain only alphabets and spaces");
+    //   return;
+    // }
 
-    const phoneNumberPattern = /^(9|8|7|6)\d{9}$/;
-    if (!phoneNumberPattern.test(contact)) {
-      toast.error("Phone number must start with 9, 8, 7, or 6 and contain exactly 10 digits");
-      return;
-    }
+    // const phoneNumberPattern = /^(9|8|7|6)\d{9}$/;
+    // if (!phoneNumberPattern.test(contact)) {
+    //   toast.error("Phone number must start with 9, 8, 7, or 6 and contain exactly 10 digits");
+    //   return;
+    // }
 
     console.log(name, password, email, city, contact);
 

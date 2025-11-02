@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/auth'; // Adjust the path accordingly
 import {toast} from "react-hot-toast";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../utils/fetchData';
 const Feedback = () => {
   const [message, setMessage] = useState('');
@@ -13,6 +13,11 @@ const Feedback = () => {
   const [error, setError] = useState(null);
 
   const { auth } = useAuth();
+  const navigate = useNavigate();
+
+  const handleAdminNavigate = () => {
+    navigate('/dashboard/admin/');
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -98,8 +103,10 @@ const Feedback = () => {
           >
             Submit
           </button>
+           <div>Go to Admin Panel </div>
         </div>
       </form>
+     
     </div>
   );
 };
